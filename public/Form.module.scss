@@ -1,0 +1,36 @@
+$input-color: lighten(#000000, 40);
+.container{
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  >form{
+    height:50%;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    >div{
+      margin:3% 0;
+      display:grid;
+      grid-template-columns: 40% 60%;
+      align-items: center;
+      >input{
+        border: 0.4px solid darken(#ffffff, 40);
+        border-radius: 6px;
+        padding: 2.5%;
+        outline: none;
+
+      }
+      >input[type="submit"]{
+        cursor:pointer;
+        background-color: $input-color;
+        color:#ffffff;
+        transition: .5s;
+        &:hover{
+          background-color:darken($input-color,10);
+        }
+      }
+    }
+  }
+}
